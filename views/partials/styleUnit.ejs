@@ -1,0 +1,208 @@
+<style>
+
+body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #324B81, #47633F);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+
+    /* Стили для кнопки выхода */
+#to_collections {
+  color: #333;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  display: inline-block;
+  margin: 30px 30px 0px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#to_collections:hover {
+  background: #47633F;
+  transform: scale(1.02);
+  color: #ffffff;
+}
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 15px;
+      border: 1px solid #ddd; /* Добавим границу для наглядности */
+    }
+
+    .collections {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      max-width: 1500px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      box-sizing: border-box;
+      gap: 65px;
+    }
+
+    .table {
+      width: 75%;
+      overflow: auto;
+    }
+
+    table {
+      align-self: start;
+      display: inline-block;
+      border-top: 0px;
+      border-bottom: 0px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #324B81;
+      color: white;
+    }
+
+    td {
+      background: white;
+      text-align: center;
+    }
+
+    .footer {
+      width: 100%;
+      background: white;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons {
+      gap: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #324B81, #47633F);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #47633F, #324B81);
+      transform: scale(1.02);
+    }
+
+    label {
+      text-align: center;
+      display: block;
+      font-weight: bold;
+      color: #47633F;
+      margin-bottom: 5px;
+    }
+
+    select {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .document-container {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    .edit-trigger, .delete-trigger {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .edit-trigger::after {
+    content: "\270E"; /* Pencil icon */
+    font-size: 14px;
+  }
+
+  .delete-trigger::after {
+    content: "\274C"; /* Cross icon */
+    font-size: 14px;
+  }
+
+  .edit-trigger:hover, .delete-trigger:hover {
+    background-color: #324B81;
+    color: white;
+    transform: scale(1.1);
+  }
+    
+</style>

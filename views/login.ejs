@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head'); %>
+  <%- include('./partials/styleLogin'); %>
+
+  <link rel="stylesheet" href="/public/css/styleLogin.css">
+  <link rel="icon" href="/img/logo-for-mh.png" type="image/png">
+  
+<body>
+  <div class="container">
+    <div class="row">
+      <img src="/img/login.png" alt="Login Icon" class="login-icon">
+      <h1><%= title%></h1>
+      <form action="/api/login" method="post">  
+      <div>
+        <label for="login">Ім'я</label>
+        <input type="text" id="login" name="login" placeholder="enter login" required>
+      </div>
+      <div>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Логін</button>
+      <a href="/api/register">Ще не зареєстрований</a>
+    </form>
+    </div>
+    
+  </div>
+</body>
+</html>

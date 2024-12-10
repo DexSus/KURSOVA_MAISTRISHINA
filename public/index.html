@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Платформа для координації волонтерської допомоги</title>
+  <link rel="icon" href="/img/logo-for-mh.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/img/logo-for-mh.png" alt="Military Hospital Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Головна</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#services">Послуги</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="user">
+        <a href="/api/login"> <img src="img/logo-for-user.png" alt=""></a>
+      </div>
+    </div>
+  </header>
+  
+  <div class="hero">
+    <img src="img/Group 4.png" alt="">
+  </div>
+
+  <div id="home" class="container-main">
+      <h1>ВІТАЄМО ВАС НА НАШІЙ <br> ПЛАТФОРМІ ДОПОМОГИ</h1>
+      <p>Найкраща та надійна платформа для збору на ваші потреби!</p>
+      <a href="/api/login" class="btn-primary">Доєднатися</a>
+  </div>
+
+    <div id="about" class="container-about">
+      <h2>Про нас</h2>
+      <p>Ми об'єднуємо волонтерів і тих, хто потребує допомоги. Наша місія — підтримка військових підрозділів і постраждалих громад. Допомагаємо через донати, доставку гуманітарних вантажів і організацію ресурсів.</p>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Швидка реакція</h3>
+          <p>Платформа дозволяє миттєво реагувати на потреби в допомозі через автоматизовані системи запитів і пропозицій</p>
+        </div>
+
+        <img src="img/done.png" alt="">
+
+        <div class="service-card">
+          <h3>Прозорість фінансів</h3>
+          <p>Всі донати та витрати відображаються в реальному часі для забезпечення довіри між донорами та користувачами</p>
+        </div>
+
+        <img src="img/done.png" alt="">
+
+        <div class="service-card">
+          <h3>Локалізація допомоги</h3>
+          <p>Ми орієнтуємося на конкретні постраждалі регіони, щоб ефективно направляти допомогу туди, де вона найбільше потрібна</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="container-services">
+      <h2>Наші послуги</h2>
+      <p>Ми пропонуємо широкий спектр послуг, щоб задовольнити всі ваші потреби. Від невідкладного збору до спеціалізованої волонтерської допомоги, наша платформа спроектована для швидкої реалізації ваших потреб</p>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="img/1.png" alt="">
+          <h3>Координація доставки</h3>
+          <p>Організовуємо оперативну доставку допомоги до військових та постраждалих</p>
+        </div>
+        <div class="service-item">
+          <img src="img/2.png" alt="">
+          <h3>Звітність для донорів</h3>
+          <p>Постійно оновлюємо інформацію про використання коштів і ресурсів</p>
+        </div>
+        <div class="service-item">
+          <img src="img/3.png" alt="">
+          <h3>Облік донатів</h3>
+          <p>Контролюємо всі внески, щоб гарантувати їх правильне використання</p>
+        </div>
+        <div class="service-item">
+          <img src="img/4.png" alt="">
+          <h3>Підтримка постраждалих</h3>
+          <p>Забезпечуємо засоби для життєдіяльності в постраждалих регіонах</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="contact" class="container-contact">
+      <h2>Зв'яжіться з нами</h2>
+      <p>Якщо у вас є будь-які запитання або вам потрібна допомога, будь ласка, не соромтеся звертатися до нас. Ми тут, щоб допомогти вам.</p>
+      <form action="/api/contact" method="post">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Електронна пошта</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Повідомлення</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="btn-primary">Відправити повідомлення</button>
+      </form>
+    </div>
+ 
+  <footer>
+      <p>&copy; 2024 Military Hospital. All rights reserved. <br> by vamais</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    background: linear-gradient(135deg, #324B81, #47633F);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .form {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #47633F;
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #47633F;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #324B81, #47633F);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+  button:hover {
+    background: linear-gradient(135deg, #47633F, #324B81);
+    transform: scale(1.02);
+  }
+
+  .btn-success {
+    background: linear-gradient(135deg, #47633F, #324B81);
+  }
+
+  .btn-success:hover {
+    background: linear-gradient(135deg, #324B81, #47633F);
+  }
+
+</style>

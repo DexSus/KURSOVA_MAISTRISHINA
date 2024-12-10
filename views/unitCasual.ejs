@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head');%>
+  <style>
+        
+      body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 0;
+      background: linear-gradient(135deg, #324B81, #47633F);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    #to_collections {
+      color: #333;
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      margin: 20px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #to_collections:hover {
+      background: #47633F;
+      transform: scale(1.02);
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 15px;
+    }
+
+    th {
+      background: #324B81;
+      color: white;
+      border: 1px solid #ddd;
+    }
+
+    td {
+      background: white;
+      border: 1px solid #ddd;
+    }
+
+    .collections {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      max-width: 1500px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .table {
+      width: 85%;
+      margin-right: 20px;
+      overflow: auto;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 15%;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #324B81, #47633F);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #47633F, #324B81);
+      transform: scale(1.02);
+    }
+
+    .footer {
+      width: 100%;
+      background: white;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    </style>
+  <body>
+    <div>
+      <a id="to_collections" href="/api/collections">Повернутися назад</a>
+      <h1>Останні донати: <%= title.toUpperCase() %></h1>
+      <div class="collections">
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <% for (const prop in documents[0]) { %>
+                  <% if (prop !== '_id') { %>
+                    <th><%= prop %></th>
+                  <% } %>
+                <% } %>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (const document of documents) { %>
+                <tr>
+                  <% for (const prop in document) { %>
+                    <% if (prop !== '_id') { %>
+                      <td><%= document[prop] %></td>
+                    <% } %>
+                  <% } %>
+                  <td>
+                    
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        <div class="buttons">
+          <form action="/api/collections/<%= title %>/export" method="GET">
+            <button>Зберегти файл</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

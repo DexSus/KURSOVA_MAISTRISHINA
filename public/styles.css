@@ -1,0 +1,424 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    background: linear-gradient(135deg, #324B81, #47633F);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 25px; /* Радиус только для нижнего левого угла */
+    border-bottom-right-radius: 25px; /* Радиус только для нижнего правого угла */
+  }
+  
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+
+  .user img {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background: #47633F;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Позиционирует изображение за текстом */
+    object-fit: cover; /* Обеспечивает правильное масштабирование изображения */
+  }
+  
+  .container {
+    width: 80%;
+    position: relative;
+    z-index: 1; /* Убедитесь, что текст находится поверх изображения */
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    padding: 15px 30px;
+    background: #47633F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #324B81;
+    transform: scale(1.05);
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .about, .contact {
+    margin-top: 400px;
+    background: #fff;
+    color: #333;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #324B81;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #324B81;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  textarea {
+    height: 100px;
+  }
+
+
+
+  .container-main {
+    margin-top: 130px;
+    margin-left: 146px;
+    padding: 40px; /* Внутренние отступы */
+    display: inline-block; /* Сжимает контейнер по размеру текста */
+  }
+  
+  /* Заголовок */
+  .container-main h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333333; /* Цвет заголовка */
+  }
+  
+  /* Подзаголовок */
+  .container-main p {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333333; /* Цвет текста подзаголовка */
+  }
+  
+  /* Кнопка */
+  .btn-primary {
+    font-size: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    background: #47633F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #324B81;
+    transform: scale(1.05);
+  }
+
+
+
+
+  /* Стили для контейнера раздела "Про нас" */
+.container-about {
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 40px 40px;
+    text-align: center;
+  }
+  
+  /* Стили для заголовка "Про нас" */
+  .container-about h2 {
+    font-size: 40px;
+    color: #324B81;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  /* Стили для параграфа с описанием */
+  .container-about p {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 1460px;
+    margin: 0 auto;
+  }
+  
+  /* Стили для контейнера карток услуг */
+  .service-cards {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .service-cards img {
+    margin-top: 50px;
+    height: 150px;;
+  }
+  
+  /* Стили для каждой картки услуги */
+  .service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Стили для заголовка картки */
+  .service-card h3 {
+    font-size: 1.5em;
+    color: #324B81;
+    margin-bottom: 15px;
+  }
+  
+  /* Стили для текста в картке */
+  .service-card p {
+    font-size: 1.4em;
+    color: #666;
+  }
+  
+  /* Эффекты при наведении на картку */
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+
+
+  .container-services {
+    width: 80%;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+    color: #333;
+}
+
+.container-services h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.container-services p {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    height: 150px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #324B81;
+}
+
+.service-item p {
+    font-size: 1.4em;
+    color: #333;
+}
+  
+
+
+
+.container-contact {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .container-contact h2 {
+    color: #324B81;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .container-contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .container-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .container-contact label {
+    font-weight: bold;
+    color: #324B81;
+    text-align: left;
+  }
+  
+  .container-contact input,
+  .container-contact textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container-contact textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .container-contact .btn-primary {
+    padding: 15px 30px;
+    background: #47633F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .container-contact .btn-primary:hover {
+    background: #324B81;
+    transform: scale(1.05);
+  }
+
+
+
+  
+  footer {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
